@@ -1,0 +1,27 @@
+
+.nav {
+  display: flex;
+  gap: 20px;
+  background-color: black;
+  padding: 15px;
+  list-style: none;
+  align-items: center;
+  height: 50px;
+}
+
+.navl {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.active {
+  color: rgb(200, 118, 10);
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+.title-nav{
+  color: aliceblue;
+}

@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": "",
+      "title": "",
+      "description": "",
+      "price": "",
+      "category": "",
+      "image": ""
+    }
+  ],
+  "users": [
+    {
+      "id": "ec38",
+      "userName": "adihh",
+      "email": "k85706035@gmail.com",
+      "password": "pass"
+    },
+    {
+      "id": "63c7",
+      "userName": "jasil",
+      "email": "jasil12@gmail.com",
+      "password": "jasil"
+    }
+  ],
+  "cart": [
+    {
+      "id": "",
+      "userId": "",
+      "products": [
+        {
+          "productId": "",
+          "quantity": ""
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "",
+      "userId": "",
+      "items": [
+        {
+          "productId": "",
+          "quantity": ""
+        }
+      ],
+      "total": "",
+      "status": "",
+      "date": "",
+      "id": "23a0"
+    }
+  ]
+}
