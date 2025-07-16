@@ -3,10 +3,12 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import styles from '../styles/login.module.css'
+import { useAuth } from '../components/authentification/Auth'
 
 function Login() {
   const navigate = useNavigate()
   const [form, setForm] = useState({ email: "", password: "" })
+  const { dispatch } = useAuth() 
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -20,10 +22,14 @@ function Login() {
       const user = res.data[0]
 
       if (user && user.password === form.password) {
-        
+  
         localStorage.setItem('user', JSON.stringify(user))
+
+    
+        dispatch({ type: 'LOGIN', payload: user })
+
         alert('Login successful')
-        navigate('/collection') 
+        navigate('/collection')
       } else {
         alert('Invalid email or password')
       }

@@ -1,12 +1,405 @@
 {
   "products": [
     {
-      "id": "",
-      "title": "",
-      "description": "",
-      "price": "",
-      "category": "",
-      "image": ""
+      "id": "1",
+      "title": "Men's Casual Shirt",
+      "category": "men",
+      "price": 999,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "blue",
+        "white"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/79/c4/9a/79c49ae80b97fb8acf8861117fc61cf2.jpg",
+      "description": "Cotton casual shirt for men.",
+      "stock": 100,
+      "rating": 4.5,
+      "tags": [
+        "shirt",
+        "men",
+        "casual"
+      ],
+      "discount": 15,
+      "isFeatured": false,
+      "createdAt": "2025-06-01T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Men's Hoodie",
+      "category": "men",
+      "price": 1499,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "black",
+        "grey"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/a7/12/b2/a712b2cf3243b495d1bea24865aba8d4.jpg",
+      "description": "Warm hoodie for winter season.",
+      "stock": 80,
+      "rating": 4.7,
+      "tags": [
+        "hoodie",
+        "men",
+        "winter"
+      ],
+      "discount": 20,
+      "isFeatured": true,
+      "createdAt": "2025-06-03T14:30:00Z"
+    },
+    {
+      "id": "3",
+      "title": "Men's Slim Jeans",
+      "category": "men",
+      "price": 1299,
+      "sizes": [
+        "30",
+        "32",
+        "34"
+      ],
+      "colors": [
+        "blue",
+        "black"
+      ],
+      "imageUrl": "https://i.pinimg.com/736x/46/8a/bc/468abcee566d3db7820ef0e1c769fd7e.jpg",
+      "description": "Stretchable slim fit jeans.",
+      "stock": 50,
+      "rating": 4.2,
+      "tags": [
+        "jeans",
+        "men",
+        "slim"
+      ],
+      "discount": 10,
+      "isFeatured": false,
+      "createdAt": "2025-06-05T09:15:00Z"
+    },
+    {
+      "id": "4",
+      "title": "Men's Polo T-Shirt",
+      "category": "men",
+      "price": 799,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "red",
+        "white"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/b0/61/de/b061de686fdcdd8e2b442594a62ed024.jpg",
+      "description": "Classic polo t-shirt for men.",
+      "stock": 120,
+      "rating": 4,
+      "tags": [
+        "polo",
+        "men",
+        "tshirt"
+      ],
+      "discount": 5,
+      "isFeatured": false,
+      "createdAt": "2025-06-08T16:00:00Z"
+    },
+    {
+      "id": "5",
+      "title": "Men's Tracksuit",
+      "category": "men",
+      "price": 1799,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "black",
+        "grey"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/33/a0/ce/33a0ce7d871519c1a25d6c2bede36ea0.jpg",
+      "description": "Full tracksuit for workouts.",
+      "stock": 60,
+      "rating": 4.6,
+      "tags": [
+        "tracksuit",
+        "men",
+        "fitness"
+      ],
+      "discount": 25,
+      "isFeatured": true,
+      "createdAt": "2025-06-10T11:00:00Z"
+    },
+    {
+      "id": "6",
+      "title": "Women's Summer Dress",
+      "category": "women",
+      "price": 1299,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "pink",
+        "white"
+      ],
+      "imageUrl": "https://i.pinimg.com/736x/be/4f/df/be4fdfb6ffc0dc071abc6106af362436.jpg",
+      "description": "Floral summer dress for casual outings.",
+      "stock": 90,
+      "rating": 4.3,
+      "tags": [
+        "dress",
+        "women",
+        "summer"
+      ],
+      "discount": 10,
+      "isFeatured": true,
+      "createdAt": "2025-06-17T12:00:00Z"
+    },
+    {
+      "id": "7",
+      "title": "Women's Kurti Set",
+      "category": "women",
+      "price": 1599,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "blue",
+        "gold"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/ca/1d/3a/ca1d3a80fdbe431d50c3e8e732e3da9e.jpg",
+      "description": "Elegant ethnic kurti with dupatta.",
+      "stock": 70,
+      "rating": 4.5,
+      "tags": [
+        "kurti",
+        "women",
+        "ethnic"
+      ],
+      "discount": 20,
+      "isFeatured": true,
+      "createdAt": "2025-06-18T08:00:00Z"
+    },
+    {
+      "id": "8",
+      "title": "Women's Jeans",
+      "category": "women",
+      "price": 1099,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "black",
+        "blue"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/95/c2/bb/95c2bb5b3cb2dd041137c99d74db8f5c.jpg",
+      "description": "High-rise skinny jeans for women.",
+      "stock": 60,
+      "rating": 4.2,
+      "tags": [
+        "jeans",
+        "women",
+        "denim"
+      ],
+      "discount": 15,
+      "isFeatured": false,
+      "createdAt": "2025-06-20T10:30:00Z"
+    },
+    {
+      "id": "9",
+      "title": "Women's Crop Top",
+      "category": "women",
+      "price": 699,
+      "sizes": [
+        "S",
+        "M"
+      ],
+      "colors": [
+        "white",
+        "beige"
+      ],
+      "imageUrl": "https://i.pinimg.com/736x/10/ac/f6/10acf6cba988b1294ab46d7c54d7f7eb.jpg",
+      "description": "Casual crop top with a modern design.",
+      "stock": 110,
+      "rating": 4.1,
+      "tags": [
+        "top",
+        "women",
+        "casual"
+      ],
+      "discount": 5,
+      "isFeatured": false,
+      "createdAt": "2025-06-22T09:45:00Z"
+    },
+    {
+      "id": "10",
+      "title": "Women's Blazer",
+      "category": "women",
+      "price": 1999,
+      "sizes": [
+        "M",
+        "L"
+      ],
+      "colors": [
+        "black",
+        "grey"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/b1/2f/b5/b12fb5e6ac4fa1137dabe013e275f79b.jpg",
+      "description": "Formal blazer for office wear.",
+      "stock": 30,
+      "rating": 4.6,
+      "tags": [
+        "blazer",
+        "women",
+        "formal"
+      ],
+      "discount": 25,
+      "isFeatured": true,
+      "createdAt": "2025-06-25T11:00:00Z"
+    },
+    {
+      "id": "11",
+      "title": "Kids Cartoon T-Shirt",
+      "category": "kids",
+      "price": 499,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "yellow",
+        "blue"
+      ],
+      "imageUrl": "https://i.pinimg.com/736x/a4/64/63/a46463fee618d293f228c17ee8d4485f.jpg",
+      "description": "Colorful t-shirt with cartoon print.",
+      "stock": 150,
+      "rating": 4.7,
+      "tags": [
+        "kids",
+        "tshirt",
+        "cartoon"
+      ],
+      "discount": 10,
+      "isFeatured": false,
+      "createdAt": "2025-06-28T10:00:00Z"
+    },
+    {
+      "id": "12",
+      "title": "Kids Denim Shorts",
+      "category": "kids",
+      "price": 699,
+      "sizes": [
+        "S",
+        "M"
+      ],
+      "colors": [
+        "blue"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/b4/38/87/b4388721e4011a7caa658d12442bb53a.jpg",
+      "description": "Lightweight denim shorts for kids.",
+      "stock": 70,
+      "rating": 4.3,
+      "tags": [
+        "shorts",
+        "kids",
+        "denim"
+      ],
+      "discount": 5,
+      "isFeatured": false,
+      "createdAt": "2025-06-28T12:30:00Z"
+    },
+    {
+      "id": "13",
+      "title": "Kids Frock Dress",
+      "category": "kids",
+      "price": 899,
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "colors": [
+        "pink",
+        "red"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/a2/9f/d3/a29fd32005205bd734d38bbf6b2ef3b1.jpg",
+      "description": "Cute frock dress for little girls.",
+      "stock": 85,
+      "rating": 4.8,
+      "tags": [
+        "kids",
+        "dress",
+        "girls"
+      ],
+      "discount": 15,
+      "isFeatured": true,
+      "createdAt": "2025-06-29T14:00:00Z"
+    },
+    {
+      "id": "14",
+      "title": "Kids Joggers",
+      "category": "kids",
+      "price": 799,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "grey",
+        "navy"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/6f/b0/91/6fb091719ebb95338768f62544324280.jpg",
+      "description": "Comfortable joggers for active kids.",
+      "stock": 60,
+      "rating": 4.4,
+      "tags": [
+        "joggers",
+        "kids",
+        "activewear"
+      ],
+      "discount": 20,
+      "isFeatured": false,
+      "createdAt": "2025-06-29T15:30:00Z"
+    },
+    {
+      "id": "15",
+      "title": "Kids Sweatshirt",
+      "category": "kids",
+      "price": 999,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "green",
+        "blue"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/c8/41/50/c8415036576391a0d757668d507eee1e.jpg",
+      "description": "Warm sweatshirt for cold days.",
+      "stock": 40,
+      "rating": 4.5,
+      "tags": [
+        "kids",
+        "sweatshirt",
+        "winter"
+      ],
+      "discount": 10,
+      "isFeatured": true,
+      "createdAt": "2025-06-30T10:00:00Z"
     }
   ],
   "users": [
@@ -21,6 +414,18 @@
       "userName": "jasil",
       "email": "jasil12@gmail.com",
       "password": "jasil"
+    },
+    {
+      "id": "ab53",
+      "userName": "hello",
+      "email": "aadithyan0411@gmail.com",
+      "password": "pass"
+    },
+    {
+      "id": "2de5",
+      "userName": "adihh",
+      "email": "adihh123@gmail.com",
+      "password": "pass"
     }
   ],
   "cart": [
@@ -37,18 +442,38 @@
   ],
   "orders": [
     {
-      "orderId": "",
-      "userId": "",
-      "items": [
-        {
-          "productId": "",
-          "quantity": ""
-        }
+      "id": "13",
+      "title": "Kids Frock Dress",
+      "category": "kids",
+      "price": 899,
+      "sizes": [
+        "XS",
+        "S",
+        "M"
       ],
-      "total": "",
-      "status": "",
-      "date": "",
-      "id": "23a0"
+      "colors": [
+        "pink",
+        "red"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/a2/9f/d3/a29fd32005205bd734d38bbf6b2ef3b1.jpg",
+      "description": "Cute frock dress for little girls.",
+      "stock": 85,
+      "rating": 4.8,
+      "tags": [
+        "kids",
+        "dress",
+        "girls"
+      ],
+      "discount": 15,
+      "isFeatured": true,
+      "createdAt": "2025-06-29T14:00:00Z",
+      "quantity": 3,
+      "customerName": "Adithyan",
+      "address": "malappuram\nmalappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "16/07/2025, 11:19:30"
     }
   ]
 }
