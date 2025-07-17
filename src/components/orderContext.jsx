@@ -10,6 +10,7 @@ const initialState = {
 function orderReducer(state, action) {
   switch (action.type) {
     case "PLACE_ORDER": 
+      // eslint-disable-next-line no-case-declarations
       const updatedOrders = [...state.orders, ...action.payload]
       localStorage.setItem("orders", JSON.stringify(updatedOrders));
       return {
@@ -37,5 +38,6 @@ export const OrderProvider = ({ children }) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useOrders = () => useContext(OrderContext);
 

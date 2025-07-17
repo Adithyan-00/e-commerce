@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 
 import { createContext, useContext, useReducer } from "react";
 
@@ -10,8 +11,10 @@ const initialState = {
 function cartReducer(state, action) {
   switch (action.type) {
     case "ADD_TO_CART":
-      const itemExists = state.cart.find(item => item.id === action.payload.id);
-      if (itemExists) {
+      
+      // eslint-disable-next-line no-case-declarations
+      const Existing = state.cart.find(item=> item.id === action.payload.id)
+      if (Existing) {
         return {
           ...state,
           cart: state.cart.map(item =>
@@ -50,6 +53,11 @@ function cartReducer(state, action) {
             : item
         ),
       };
+      case "CLEAR_CART":
+        return{
+          ...state,
+          cart :[]
+        };
 
     default:
       return state;
@@ -65,4 +73,6 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>;
 };
 
-export const useCart = () => useContext(CartContext);
+export function useCart() {
+  return useContext(CartContext);
+}

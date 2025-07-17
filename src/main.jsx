@@ -5,16 +5,19 @@ import {BrowserRouter} from 'react-router-dom'
 import { CartProvider } from './components/CartContext.jsx'
 import { OrderProvider } from './components/orderContext.jsx'
 import { AuthProvider } from './components/authentification/Auth.jsx'
+import { Whishlist } from './components/WhishlistCon.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter basename='/e-commerce'>
       <AuthProvider>
-        <CartProvider>
-          <OrderProvider>
-            <App />
-          </OrderProvider>
-        </CartProvider>
+        <Whishlist>
+          <CartProvider>
+            <OrderProvider>
+              <App />
+            </OrderProvider>
+          </CartProvider>
+        </Whishlist>
       </AuthProvider>
     </BrowserRouter>
   </StrictMode>,

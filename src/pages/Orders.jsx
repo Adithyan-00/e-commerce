@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../components/authentification/Auth";
+import styles from "../styles/order.module.css"
 
 function Orders() {
   const [orders, setOrders] = useState([]);
@@ -18,22 +19,44 @@ function Orders() {
       .catch((err) => console.error("Error", err));
   }, [user]);
 
-  if (orders.length === 0)
-    return <h2 style={{ paddingTop: "100px" }}>No Orders Yet 💤</h2>;
+  if (orders.length === 0) {
+    return (
+      <div className={styles.emptyOrders}>
+        <h2>No Orders Yet 💤</h2>
+      </div>
+    );
+  }
 
   return (
-    <div style={{ padding: "100px 40px" }}>
-      <h2>Your Orders</h2>
+    <div className={styles.ordersContainer}>
+      <h2 className={styles.ordersTitle}>Your Orders</h2>
+      
       {orders.map((order, index) => (
-        <div key={index} style={{ display: "flex", marginBottom: "20px" }}>
-          <img src={order.imageUrl} alt={order.title} width="100" />
-          <div style={{ marginLeft: "20px" }}>
-            <h3>{order.title}</h3>
-            <p>Price: ₹{order.price}</p>
-            <p>Quantity: {order.quantity}</p>
-            <p>Name: {order.customerName}</p>
-            <p>Address: {order.address}</p>
-            <p>Date: {order.date}</p>
+        <div key={index} className={styles.orderItem}>
+          <img 
+            src={order.imageUrl} 
+            alt={order.title} 
+            className={styles.orderImage}
+          />
+          <div className={styles.orderDetails}>
+            <h3 className={styles.orderTitle}>{order.title}</h3>
+            <div className={styles.orderInfo}>
+              <p className={styles.orderPrice}>
+                <span className={styles.label}>Price:</span> ₹{order.price}
+              </p>
+              <p className={styles.orderQuantity}>
+                <span className={styles.label}>Quantity:</span> {order.quantity}
+              </p>
+              <p className={styles.orderCustomer}>
+                <span className={styles.label}>Name:</span> {order.customerName}
+              </p>
+              <p className={styles.orderAddress}>
+                <span className={styles.label}>Address:</span> {order.address}
+              </p>
+              <p className={styles.orderDate}>
+                <span className={styles.label}>Date:</span> {order.date}
+              </p>
+            </div>
           </div>
         </div>
       ))}

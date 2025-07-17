@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import styles from './card.module.css'; 
-
 function CollectionCard({ value: product }) {
   if (!product) return null;
+
 
   return (
     <div className={styles['product-card']}>

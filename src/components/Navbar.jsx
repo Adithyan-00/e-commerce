@@ -25,15 +25,6 @@ function Navbar() {
           <NavLink to="/collection" className={({ isActive }) => isActive ? styles.active : styles.navl}>Collection</NavLink>
         </li>
         <li>
-          <NavLink to="/men" className={({ isActive }) => isActive ? styles.active : styles.navl}>Men</NavLink>
-        </li>
-        <li>
-          <NavLink to="/women" className={({ isActive }) => isActive ? styles.active : styles.navl}>Women</NavLink>
-        </li>
-        <li>
-          <NavLink to="/kids" className={({ isActive }) => isActive ? styles.active : styles.navl}>Kids</NavLink>
-        </li>
-        <li>
           <NavLink to="/cart" className={({ isActive }) => isActive ? styles.active : styles.navl}>Cart</NavLink>
         </li>
 

@@ -442,38 +442,109 @@
   ],
   "orders": [
     {
-      "id": "13",
-      "title": "Kids Frock Dress",
-      "category": "kids",
-      "price": 899,
+      "id": "3",
+      "title": "Men's Slim Jeans",
+      "category": "men",
+      "price": 1299,
       "sizes": [
-        "XS",
-        "S",
-        "M"
+        "30",
+        "32",
+        "34"
       ],
       "colors": [
-        "pink",
-        "red"
+        "blue",
+        "black"
       ],
-      "imageUrl": "https://i.pinimg.com/1200x/a2/9f/d3/a29fd32005205bd734d38bbf6b2ef3b1.jpg",
-      "description": "Cute frock dress for little girls.",
-      "stock": 85,
-      "rating": 4.8,
+      "imageUrl": "https://i.pinimg.com/736x/46/8a/bc/468abcee566d3db7820ef0e1c769fd7e.jpg",
+      "description": "Stretchable slim fit jeans.",
+      "stock": 50,
+      "rating": 4.2,
       "tags": [
-        "kids",
-        "dress",
-        "girls"
+        "jeans",
+        "men",
+        "slim"
       ],
-      "discount": 15,
-      "isFeatured": true,
-      "createdAt": "2025-06-29T14:00:00Z",
-      "quantity": 3,
+      "discount": 10,
+      "isFeatured": false,
+      "createdAt": "2025-06-05T09:15:00Z",
+      "quantity": 1,
       "customerName": "Adithyan",
       "address": "malappuram\nmalappuram",
       "pincode": "676504",
       "paymentMethod": "cod",
       "userEmail": "k85706035@gmail.com",
-      "date": "16/07/2025, 11:19:30"
+      "date": "17/07/2025, 10:50:54",
+      "cardInfo": null
+    },
+    {
+      "id": "2",
+      "title": "Men's Hoodie",
+      "category": "men",
+      "price": 1499,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "black",
+        "grey"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/a7/12/b2/a712b2cf3243b495d1bea24865aba8d4.jpg",
+      "description": "Warm hoodie for winter season.",
+      "stock": 80,
+      "rating": 4.7,
+      "tags": [
+        "hoodie",
+        "men",
+        "winter"
+      ],
+      "discount": 20,
+      "isFeatured": true,
+      "createdAt": "2025-06-03T14:30:00Z",
+      "quantity": 1,
+      "customerName": "Adithyan K",
+      "address": "malappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 10:51:16",
+      "cardInfo": null
+    },
+    {
+      "id": "4",
+      "title": "Men's Polo T-Shirt",
+      "category": "men",
+      "price": 799,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "red",
+        "white"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/b0/61/de/b061de686fdcdd8e2b442594a62ed024.jpg",
+      "description": "Classic polo t-shirt for men.",
+      "stock": 120,
+      "rating": 4,
+      "tags": [
+        "polo",
+        "men",
+        "tshirt"
+      ],
+      "discount": 5,
+      "isFeatured": false,
+      "createdAt": "2025-06-08T16:00:00Z",
+      "quantity": 1,
+      "customerName": "Adithyan K",
+      "address": "malappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 10:53:17",
+      "cardInfo": null
     }
   ]
 }

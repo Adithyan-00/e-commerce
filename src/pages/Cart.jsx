@@ -1,7 +1,7 @@
-
 import { useCart } from '../components/CartContext';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import styles from "../styles/cart.module.css"
 
 function Cart() {
   const { cart, dispatch } = useCart();
@@ -10,40 +10,63 @@ function Cart() {
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   const handleCheckout = () => {
+
     navigate("/checkout");
   };
 
-  if (cart.length === 0) return <h2 style={{ padding: "80px" }}>🛒 Your cart is empty</h2>;
+  if (cart.length === 0) {
+    return (
+      <div className={styles.emptyCart}>
+        <h2>🛒 Your cart is empty</h2>
+      </div>
+    );
+  }
 
   return (
-    <div style={{ padding: "100px 40px" }}>
-      <h2>Your Cart</h2>
+    <div className={styles.cartContainer}>
+      <h2 className={styles.cartTitle}>Your Cart</h2>
 
       {cart.map((item) => (
-        <div key={item.id} style={{ display: "flex", marginBottom: "20px" }}>
-          <img src={item.imageUrl} alt={item.title} width="100" />
-          <div style={{ marginLeft: "20px" }}>
-            <h3>{item.title}</h3>
-            <p>₹{item.price} × {item.quantity} = ₹{item.price * item.quantity}</p>
-            <button onClick={() => dispatch({ type: "DECREASE", payload: item.id })}>-</button>
-            <button onClick={() => dispatch({ type: "INCREASE", payload: item.id })}>+</button>
-            <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: item.id })}>Remove</button>
+        <div key={item.id} className={styles.cartItem}>
+          <img 
+            src={item.imageUrl} 
+            alt={item.title} 
+            className={styles.itemImage}
+          />
+          <div className={styles.itemDetails}>
+            <h3 className={styles.itemTitle}>{item.title}</h3>
+            <p className={styles.itemPrice}>
+              ₹{item.price} × {item.quantity} = ₹{item.price * item.quantity}
+            </p>
+            <div className={styles.itemActions}>
+              <button 
+                className={styles.quantityBtn}
+                onClick={() => dispatch({ type: "DECREASE", payload: item.id })}
+              >
+                -
+              </button>
+              <button 
+                className={styles.quantityBtn}
+                onClick={() => dispatch({ type: "INCREASE", payload: item.id })}
+              >
+                +
+              </button>
+              <button 
+                className={styles.removeBtn}
+                onClick={() => dispatch({ type: "REMOVE_ITEM", payload: item.id })}
+              >
+                Remove
+              </button>
+            </div>
           </div>
         </div>
       ))}
 
-      <h3>Total: ₹{total}</h3>
+      <h3 className={styles.total}>Total: ₹{total}</h3>
 
       <button
         onClick={handleCheckout}
-        style={{
-          marginTop: "20px",
-          padding: "10px 20px",
-          background: "blue",
-          color: "white",
-          border: "none",
-          cursor: "pointer"
-        }}
+        className={styles.checkoutBtn}
       >
         Proceed to Checkout
       </button>

@@ -1,0 +1,49 @@
+.subnav {
+  background-color: #f8f8f8;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navl {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #444;
+  padding-bottom: 4px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navl:hover {
+  color: #000;
+  border-bottom: 2px solid #aaa;
+}
+
+.active {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  text-decoration: none;
+}
+
+.search {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}

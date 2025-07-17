@@ -1,0 +1,136 @@
+
+.ordersContainer {
+  padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.ordersTitle {
+  color: #333333;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.emptyOrders {
+  padding-top: 100px;
+  text-align: center;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.emptyOrders h2 {
+  color: #666666;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.orderItem {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 25px;
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.orderItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.orderImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+.orderDetails {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.orderTitle {
+  color: #333333;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.orderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.orderInfo p {
+  color: #666666;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.label {
+  color: #333333;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.orderPrice {
+  color: #333333;
+  font-weight: 500;
+}
+
+.orderQuantity {
+  color: #666666;
+}
+
+.orderCustomer {
+  color: #666666;
+}
+
+.orderAddress {
+  color: #666666;
+  line-height: 1.6;
+}
+
+.orderDate {
+  color: #999999;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .ordersContainer {
+    padding: 80px 20px;
+  }
+  
+  .orderItem {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .orderImage {
+    align-self: center;
+    margin-bottom: 15px;
+  }
+  
+  .orderDetails {
+    margin-left: 0;
+  }
+  
+  .orderInfo {
+    text-align: left;
+  }
+}

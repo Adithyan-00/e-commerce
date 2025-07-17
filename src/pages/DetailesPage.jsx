@@ -22,6 +22,10 @@ function DetailesPage() {
     Navigate('/cart')
   };
 
+  const BuyNow = ()=>{
+    Navigate('/checkout')
+  }
+
   if (!product) return <div className={styles.loading}>Loading...</div>;
 
   return (
@@ -43,7 +47,7 @@ function DetailesPage() {
           </div>
           <div className={styles.actions}>
             <button className={styles.addToCart} onClick={addToCart}>Add to Cart</button>
-            <button className={styles.buyNow}>Buy Now</button>
+            <button className={styles.buyNow} onClick={BuyNow}>Buy Now</button>
           </div>
         </div>
       </div>

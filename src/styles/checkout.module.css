@@ -49,3 +49,61 @@
 .button:hover {
   background-color: darkgreen;
 }
+.creditCardContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creditCard {
+  width: 350px;
+  height: 200px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #4a00e0, #8e2de2);
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.creditCard:hover {
+  transform: scale(1.03);
+}
+
+.chip {
+  width: 50px;
+  height: 35px;
+  background: gold;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.cardNumber {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.cardDetails {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.cardDetails label {
+  font-size: 0.7rem;
+  color: #ccc;
+}
+
+.cardName {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import useFetch from '../hooks/useFetch';
 import CollectionCard from '../components/CollectionCard';
+import SubNav from '../components/SubNav';
 
 function Collection() {
   const { data: products, loading } = useFetch('http://localhost:5000/products');
@@ -10,6 +11,7 @@ function Collection() {
 
   return (
     <>
+    <SubNav/>
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
