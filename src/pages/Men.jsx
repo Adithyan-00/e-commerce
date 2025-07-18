@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import styles from '../components/card.module.css';
 import SubNav from '../components/SubNav';
+import Navbar from '../components/Navbar';
 
 function Men() {
   const { data: products, loading } = useFetch('http://localhost:5000/products');
@@ -33,6 +34,7 @@ function Men() {
 
   return (
     <>
+      
       <SubNav
         onSearchChange={setSearchTerm}
         onPriceChange={setSortOrder}

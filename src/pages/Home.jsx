@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar"
+import NavHome from "../components/NavHome";
 import styles from '../styles/home.module.css';
 import { useNavigate } from "react-router-dom";
 
@@ -12,6 +13,7 @@ function Home(){
 
     return(
         <>      
+        <NavHome/>
         <div className={styles.container}>
         <header className={styles.hero}>
             <h1>Welcome to NueWear 👕</h1>

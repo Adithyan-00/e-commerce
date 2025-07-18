@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import styles from '../components/card.module.css';
 import SubNav from '../components/SubNav';
+import Navbar from '../components/Navbar';
 
 function Women() {
   const { data: products, loading } = useFetch('http://localhost:5000/products');

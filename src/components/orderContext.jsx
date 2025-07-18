@@ -30,9 +30,10 @@ export const OrderProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("orders", JSON.stringify(state.orders));
   }, [state.orders]);
+  
 
   return (
-    <OrderContext.Provider value={{ orders: state.orders, dispatch }}>
+    <OrderContext.Provider value={{ orders: state.orders, dispatch }}>  
       {children}
     </OrderContext.Provider>
   );

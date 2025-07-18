@@ -2,8 +2,11 @@ import { useCart } from '../components/CartContext';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/cart.module.css"
+import { useAuth } from '../components/authentification/Auth';
+import Navbar from '../components/Navbar';
 
 function Cart() {
+  const {user} = useAuth()
   const { cart, dispatch } = useCart();
   const navigate = useNavigate();
 
@@ -23,6 +26,7 @@ function Cart() {
   }
 
   return (
+    <>
     <div className={styles.cartContainer}>
       <h2 className={styles.cartTitle}>Your Cart</h2>
 
@@ -53,7 +57,7 @@ function Cart() {
               </button>
               <button 
                 className={styles.removeBtn}
-                onClick={() => dispatch({ type: "REMOVE_ITEM", payload: item.id })}
+                onClick={() => dispatch({ type: "REMOVE_ITEM", payload: { id: item.id, userId: user.id } })}
               >
                 Remove
               </button>
@@ -71,6 +75,7 @@ function Cart() {
         Proceed to Checkout
       </button>
     </div>
+    </>
   );
 }
 

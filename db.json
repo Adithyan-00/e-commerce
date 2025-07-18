@@ -426,6 +426,12 @@
       "userName": "adihh",
       "email": "adihh123@gmail.com",
       "password": "pass"
+    },
+    {
+      "id": "50c9",
+      "userName": "hiii",
+      "email": "hii@gmail.com",
+      "password": "pass"
     }
   ],
   "cart": [
@@ -544,6 +550,371 @@
       "paymentMethod": "cod",
       "userEmail": "k85706035@gmail.com",
       "date": "17/07/2025, 10:53:17",
+      "cardInfo": null
+    },
+    {
+      "id": "1",
+      "title": "Men's Casual Shirt",
+      "category": "men",
+      "price": 999,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "blue",
+        "white"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/79/c4/9a/79c49ae80b97fb8acf8861117fc61cf2.jpg",
+      "description": "Cotton casual shirt for men.",
+      "stock": 100,
+      "rating": 4.5,
+      "tags": [
+        "shirt",
+        "men",
+        "casual"
+      ],
+      "discount": 15,
+      "isFeatured": false,
+      "createdAt": "2025-06-01T10:00:00Z",
+      "quantity": 1,
+      "customerName": "Adithyan K",
+      "address": "malappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 13:40:44",
+      "cardInfo": null
+    },
+    {
+      "id": "f9b0",
+      "userId": "ec38",
+      "productId": "1",
+      "quantity": 1,
+      "customerName": "Adithyan",
+      "address": "malappuram\nmalappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 15:19:31",
+      "cardInfo": null
+    },
+    {
+      "id": "2",
+      "title": "Men's Hoodie",
+      "category": "men",
+      "price": 1499,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "black",
+        "grey"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/a7/12/b2/a712b2cf3243b495d1bea24865aba8d4.jpg",
+      "description": "Warm hoodie for winter season.",
+      "stock": 80,
+      "rating": 4.7,
+      "tags": [
+        "hoodie",
+        "men",
+        "winter"
+      ],
+      "discount": 20,
+      "isFeatured": true,
+      "createdAt": "2025-06-03T14:30:00Z",
+      "quantity": 10,
+      "customerName": "Adithyan K",
+      "address": "malappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "hii@gmail.com",
+      "date": "17/07/2025, 15:31:22",
+      "cardInfo": null
+    },
+    {
+      "id": "2",
+      "title": "Men's Hoodie",
+      "category": "men",
+      "price": 1499,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "black",
+        "grey"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/a7/12/b2/a712b2cf3243b495d1bea24865aba8d4.jpg",
+      "description": "Warm hoodie for winter season.",
+      "stock": 80,
+      "rating": 4.7,
+      "tags": [
+        "hoodie",
+        "men",
+        "winter"
+      ],
+      "discount": 20,
+      "isFeatured": true,
+      "createdAt": "2025-06-03T14:30:00Z",
+      "quantity": 1,
+      "customerName": "Adithyan",
+      "address": "malappuram\nmalappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "hii@gmail.com",
+      "date": "17/07/2025, 16:04:57",
+      "cardInfo": null
+    },
+    {
+      "id": "2",
+      "title": "Men's Hoodie",
+      "category": "men",
+      "price": 1499,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "black",
+        "grey"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/a7/12/b2/a712b2cf3243b495d1bea24865aba8d4.jpg",
+      "description": "Warm hoodie for winter season.",
+      "stock": 80,
+      "rating": 4.7,
+      "tags": [
+        "hoodie",
+        "men",
+        "winter"
+      ],
+      "discount": 20,
+      "isFeatured": true,
+      "createdAt": "2025-06-03T14:30:00Z",
+      "userId": "ec38",
+      "quantity": 1,
+      "customerName": "Adithyan",
+      "address": "malappuram\nmalappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 22:00:59",
+      "cardInfo": null
+    },
+    {
+      "id": "12",
+      "title": "Kids Denim Shorts",
+      "category": "kids",
+      "price": 699,
+      "sizes": [
+        "S",
+        "M"
+      ],
+      "colors": [
+        "blue"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/b4/38/87/b4388721e4011a7caa658d12442bb53a.jpg",
+      "description": "Lightweight denim shorts for kids.",
+      "stock": 70,
+      "rating": 4.3,
+      "tags": [
+        "shorts",
+        "kids",
+        "denim"
+      ],
+      "discount": 5,
+      "isFeatured": false,
+      "createdAt": "2025-06-28T12:30:00Z",
+      "userId": "ec38",
+      "quantity": 1,
+      "customerName": "Adithyan K",
+      "address": "malappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 22:03:11",
+      "cardInfo": null
+    },
+    {
+      "id": "12",
+      "title": "Kids Denim Shorts",
+      "category": "kids",
+      "price": 699,
+      "sizes": [
+        "S",
+        "M"
+      ],
+      "colors": [
+        "blue"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/b4/38/87/b4388721e4011a7caa658d12442bb53a.jpg",
+      "description": "Lightweight denim shorts for kids.",
+      "stock": 70,
+      "rating": 4.3,
+      "tags": [
+        "shorts",
+        "kids",
+        "denim"
+      ],
+      "discount": 5,
+      "isFeatured": false,
+      "createdAt": "2025-06-28T12:30:00Z",
+      "userId": "ec38",
+      "quantity": 1,
+      "customerName": "Adithyan K",
+      "address": "malappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 22:17:28",
+      "cardInfo": null
+    },
+    {
+      "id": "9",
+      "title": "Women's Crop Top",
+      "category": "women",
+      "price": 699,
+      "sizes": [
+        "S",
+        "M"
+      ],
+      "colors": [
+        "white",
+        "beige"
+      ],
+      "imageUrl": "https://i.pinimg.com/736x/10/ac/f6/10acf6cba988b1294ab46d7c54d7f7eb.jpg",
+      "description": "Casual crop top with a modern design.",
+      "stock": 110,
+      "rating": 4.1,
+      "tags": [
+        "top",
+        "women",
+        "casual"
+      ],
+      "discount": 5,
+      "isFeatured": false,
+      "createdAt": "2025-06-22T09:45:00Z",
+      "userId": "ec38",
+      "quantity": 1,
+      "customerName": "Adithyan K",
+      "address": "malappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 22:17:28",
+      "cardInfo": null
+    },
+    {
+      "id": "15",
+      "title": "Kids Sweatshirt",
+      "category": "kids",
+      "price": 999,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "green",
+        "blue"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/c8/41/50/c8415036576391a0d757668d507eee1e.jpg",
+      "description": "Warm sweatshirt for cold days.",
+      "stock": 40,
+      "rating": 4.5,
+      "tags": [
+        "kids",
+        "sweatshirt",
+        "winter"
+      ],
+      "discount": 10,
+      "isFeatured": true,
+      "createdAt": "2025-06-30T10:00:00Z",
+      "userId": "ec38",
+      "quantity": 2,
+      "customerName": "Adithyan K",
+      "address": "malappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 22:26:00",
+      "cardInfo": null
+    },
+    {
+      "id": "13",
+      "title": "Kids Frock Dress",
+      "category": "kids",
+      "price": 899,
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "colors": [
+        "pink",
+        "red"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/a2/9f/d3/a29fd32005205bd734d38bbf6b2ef3b1.jpg",
+      "description": "Cute frock dress for little girls.",
+      "stock": 85,
+      "rating": 4.8,
+      "tags": [
+        "kids",
+        "dress",
+        "girls"
+      ],
+      "discount": 15,
+      "isFeatured": true,
+      "createdAt": "2025-06-29T14:00:00Z",
+      "userId": "ec38",
+      "quantity": 1,
+      "customerName": "Adithyan K",
+      "address": "malappuram",
+      "pincode": "676504",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "17/07/2025, 22:26:00",
+      "cardInfo": null
+    },
+    {
+      "id": "4",
+      "title": "Men's Polo T-Shirt",
+      "category": "men",
+      "price": 799,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "red",
+        "white"
+      ],
+      "imageUrl": "https://i.pinimg.com/1200x/b0/61/de/b061de686fdcdd8e2b442594a62ed024.jpg",
+      "description": "Classic polo t-shirt for men.",
+      "stock": 120,
+      "rating": 4,
+      "tags": [
+        "polo",
+        "men",
+        "tshirt"
+      ],
+      "discount": 5,
+      "isFeatured": false,
+      "createdAt": "2025-06-08T16:00:00Z",
+      "userId": "ec38",
+      "quantity": 1,
+      "customerName": "heyr",
+      "address": "mlp",
+      "pincode": "78238",
+      "paymentMethod": "cod",
+      "userEmail": "k85706035@gmail.com",
+      "date": "18/07/2025, 11:13:36",
       "cardInfo": null
     }
   ]

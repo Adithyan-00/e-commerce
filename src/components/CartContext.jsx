@@ -1,6 +1,6 @@
-/* eslint-disable react-refresh/only-export-components */
-
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useEffect } from "react";
+import axios from "axios";
+import { useAuth } from "./authentification/Auth";
 
 const CartContext = createContext();
 
@@ -11,14 +11,15 @@ const initialState = {
 function cartReducer(state, action) {
   switch (action.type) {
     case "ADD_TO_CART":
-      
-      // eslint-disable-next-line no-case-declarations
-      const Existing = state.cart.find(item=> item.id === action.payload.id)
-      if (Existing) {
+      { const existing = state.cart.find(
+        item => item.id === action.payload.id && item.userId === action.payload.userId
+      );
+
+      if (existing) {
         return {
           ...state,
           cart: state.cart.map(item =>
-            item.id === action.payload.id
+            item.id === action.payload.id && item.userId === action.payload.userId
               ? { ...item, quantity: item.quantity + 1 }
               : item
           ),
@@ -28,13 +29,15 @@ function cartReducer(state, action) {
           ...state,
           cart: [...state.cart, { ...action.payload, quantity: 1 }],
         };
-      }
+      } }
+        case "REMOVE_ITEM":
+          return {
+            ...state,
+            cart: state.cart.filter(
+              item => !(item.id === action.payload.id && item.userId === action.payload.userId)
+            )
+          };
 
-    case "REMOVE_ITEM":
-      return {
-        ...state,
-        cart: state.cart.filter(item => item.id !== action.payload),
-      };
 
     case "INCREASE":
       return {
@@ -53,11 +56,12 @@ function cartReducer(state, action) {
             : item
         ),
       };
-      case "CLEAR_CART":
-        return{
-          ...state,
-          cart :[]
-        };
+
+    case "CLEAR_CART":
+      return {
+        ...state,
+        cart: []
+      };
 
     default:
       return state;
@@ -66,13 +70,46 @@ function cartReducer(state, action) {
 
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
+  const { user } = useAuth();
+  
+  useEffect(() => {
+    const syncCart = async () => {
+      if (!user) return;
+ 
+      try {
+        const res = await axios.get(`http://localhost:5000/cart?userId=${user.id}`);
+        for (const item of res.data) {
+          await axios.delete(`http://localhost:5000/cart/${item.id}`);
+        }
+ 
+        for (const item of state.cart) {
+          await axios.post("http://localhost:5000/cart", {
+            ...item,
+            userId: user.id,
+          });
+        }
+      } catch (err) {
+        console.error("❌ Error syncing cart:", err);
+      }
+    };
+ 
+    syncCart();
+  }, [state.cart, user]);
 
-  const value = { cart: state.cart, dispatch };
-  return <CartContext.Provider value={value}>
-    {children}
-    </CartContext.Provider>;
+  const userCart = user
+    ? state.cart.filter(item => item.userId === user.id)
+    : [];
+ 
+  const value = { cart: userCart, dispatch };
+
+  return (
+    <CartContext.Provider value={value}>
+      {children}
+    </CartContext.Provider>
+  );
 };
 
-export function useCart() {
+// eslint-disable-next-line react-refresh/only-export-components
+export const useCart =() => {
   return useContext(CartContext);
 }

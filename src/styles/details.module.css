@@ -139,7 +139,6 @@
   box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     padding: 20px 16px;

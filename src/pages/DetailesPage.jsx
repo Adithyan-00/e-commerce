@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import styles from "../styles/details.module.css";
 import { useCart } from '../components/CartContext';
-import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../components/authentification/Auth';
+import Navbar from '../components/Navbar';
 
 function DetailesPage() {
-  const Navigate = useNavigate()
+  const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const { dispatch } = useCart();
+  const { user } = useAuth();
 
   useEffect(() => {
     fetch(`http://localhost:5000/products/${id}`)
@@ -17,24 +19,35 @@ function DetailesPage() {
   }, [id]);
 
   const addToCart = () => {
-    dispatch({ type: "ADD_TO_CART", payload: product });
+    if (!user) {
+      alert("Please login to add items to cart 🛑");
+      return navigate('/login');
+    }
+
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: { ...product, userId: user.id }
+    });
+
     alert("Added to cart ✅");
-    Navigate('/cart')
+    navigate('/cart');
   };
 
-  const BuyNow = ()=>{
-    Navigate('/checkout')
-  }
+  const BuyNow = () => {
+    navigate('/checkout');
+  };
 
   if (!product) return <div className={styles.loading}>Loading...</div>;
 
   return (
+    <>
+    
     <div className={styles.container}>
       <div className={styles.productDetails}>
         <div className={styles.imageSection}>
-          <img 
-            src={product.imageUrl} 
-            alt={product.title} 
+          <img
+            src={product.imageUrl}
+            alt={product.title}
             className={styles.productImage}
           />
         </div>
@@ -52,6 +65,7 @@ function DetailesPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

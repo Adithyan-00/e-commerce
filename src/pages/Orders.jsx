@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../components/authentification/Auth";
 import styles from "../styles/order.module.css"
+import Navbar from "../components/Navbar";
 
 function Orders() {
   const [orders, setOrders] = useState([]);
@@ -28,6 +29,8 @@ function Orders() {
   }
 
   return (
+    <>
+    
     <div className={styles.ordersContainer}>
       <h2 className={styles.ordersTitle}>Your Orders</h2>
       
@@ -61,6 +64,7 @@ function Orders() {
         </div>
       ))}
     </div>
+    </>
   );
 }
 

@@ -4,6 +4,7 @@ import { useAuth } from "../components/authentification/Auth";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/checkout.module.css";
+import Navbar from "../components/Navbar";
 
 function Checkout() {
   const { cart, dispatch } = useCart();
@@ -65,6 +66,8 @@ function Checkout() {
   };
 
   return (
+    <>
+    
     <div className={styles.container}>
       <h2 className={styles.heading}>🧾 Checkout</h2>
 
@@ -194,6 +197,7 @@ function Checkout() {
         ✅ Place Order
       </button>
     </div>
+    </>
   );
 }
 

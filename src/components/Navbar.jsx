@@ -6,10 +6,24 @@ function Navbar() {
   const { isAuthenticated, user, dispatch } = useAuth();
   const navigate = useNavigate();
 
+  const userName = user?.userName;
+
+  const newName = userName?.toUpperCase()
+  console.log(newName);
+  
+
+  console.log(userName);
+  
+  
+
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
     navigate("/login");
+    console.log(user);
+    
   };
+
+
 
   return (
     <div className={styles.nav}>
@@ -40,8 +54,8 @@ function Navbar() {
           </li>
         ) : (
           <>
-            <li style={{ color: "green", listStyle: "none" }}>
-               {user?.name}
+            <li style={{ color: "orange", listStyle: "none" }}>
+                {`Hii !`} {newName}
             </li>
             <li>
               <button onClick={handleLogout} className={styles.navl} style={{ background: "none", border: "none", cursor: "pointer", color: "red" }}>
