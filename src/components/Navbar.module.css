@@ -1,27 +1,51 @@
-
 .nav {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
   background-color: black;
-  padding: 15px;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.navLeft {
+  flex: 1;
+}
+
+.navCenter {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   list-style: none;
   align-items: center;
-  height: 50px;
+  margin-bottom: 0%;
+}
+
+.navRight {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+  list-style: none;
 }
 
 .navl {
-  color: white;
+  color: #ccc;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 20px;
+}
+
+.navl:hover {
+  color: orange;
 }
 
 .active {
-  color: rgb(200, 118, 10);
+  color: orange;
   font-weight: bold;
-  font-size: 20px;
   text-decoration: none;
-}
-.title-nav{
-  color: aliceblue;
+  font-size: 20px;
 }

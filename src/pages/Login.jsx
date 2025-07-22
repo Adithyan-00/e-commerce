@@ -1,47 +1,49 @@
-
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import styles from '../styles/login.module.css'
-import { useAuth } from '../components/authentification/Auth'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import styles from '../styles/login.module.css';
+import { useAuth } from '../components/authentification/Auth';
 
 function Login() {
-  const navigate = useNavigate()
-  const [form, setForm] = useState({ email: "", password: "" })
-  const { dispatch } = useAuth() 
+  const navigate = useNavigate();
+  const [form, setForm] = useState({ email: "", password: "" });
+  const { dispatch } = useAuth();
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-  const handleLogin = async (e) => {
-    e.preventDefault()
+ const handleLogin = async (e) => {
+  e.preventDefault();
 
-    try {
-      const res = await axios.get(`http://localhost:5000/users?email=${form.email}`)
-      const user = res.data[0]
+  try {
+    const res = await axios.get(`http://localhost:5000/users?email=${form.email}`);
+    const user = res.data[0];
 
-      if (user && user.password === form.password) {
-  
-        localStorage.setItem('user', JSON.stringify(user))
+    if (user && user.password === form.password) {
+      localStorage.setItem('user', JSON.stringify(user));
+      dispatch({ type: 'LOGIN', payload: user });
 
-    
-        dispatch({ type: 'LOGIN', payload: user })
-
-        alert('Login successful')
-        navigate('/collection')
+      if (user.role === 'admin') {
+        alert('Admin login successful');
+        navigate('/dashboard'); // ✅ Fixed here
       } else {
-        alert('Invalid email or password')
+        alert('User login successful');
+        navigate('/collection');
       }
-    } catch (err) {
-      console.error(err)
-      alert('Login failed')
+    } else {
+      alert('Invalid email or password');
     }
+  } catch (err) {
+    console.error(err);
+    alert('Login failed');
   }
+};
+
 
   const GotoRegister = () => {
-    navigate('/register')
-  }
+    navigate('/register');
+  };
 
   return (
     <div className={styles.container}>
@@ -72,13 +74,12 @@ function Login() {
         </form>
 
         <span>No account yet? Create one now 👇</span>
-
         <button onClick={GotoRegister} className={styles.button}>
           Register
         </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

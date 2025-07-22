@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import styles from '../components/card.module.css';
 import SubNav from '../components/SubNav';
-import Navbar from '../components/Navbar';
 
 function Women() {
   const { data: products, loading } = useFetch('http://localhost:5000/products');
@@ -34,17 +33,18 @@ function Women() {
 
   return (
     <>
-      <SubNav
+      <SubNav 
         onSearchChange={setSearchTerm}
-        onPriceChange={setSortOrder}
+        onSortChange={setSortOrder}
       />
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: '20px',
-        padding: '100px 40px',
+        gridTemplateColumns: 'repeat(3, 350px)',
+        gap: '90px',
+        padding: '50px 40px',
         maxWidth: '1400px',
-        margin: '0 auto'
+        margin: '0 auto',
+        justifyContent: 'center'
       }}>
         {filteredProducts.map((product) => (
           <div key={product.id} className={styles['product-card']}>

@@ -56,8 +56,9 @@ function Checkout() {
       for (const order of orderData) {
         await axios.post("http://localhost:5000/orders", order);
       }
-      dispatch({ type: "CLEAR_CART" });
+      dispatch({ type: "PLACE_ORDER" });
       alert("Order placed successfully ✅");
+      dispatch({type : "CLEAR_CART"})
       navigate("/orders");
     } catch (err) {
       console.error(err);

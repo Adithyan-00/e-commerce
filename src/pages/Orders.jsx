@@ -47,6 +47,10 @@ function Orders() {
               <p className={styles.orderPrice}>
                 <span className={styles.label}>Price:</span> ₹{order.price}
               </p>
+             <p>
+                <span className={styles.label}>Size:</span> {order.size}
+              </p>
+
               <p className={styles.orderQuantity}>
                 <span className={styles.label}>Quantity:</span> {order.quantity}
               </p>

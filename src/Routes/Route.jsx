@@ -1,3 +1,4 @@
+
 import { Routes , Route} from "react-router-dom"
 import Home from "../pages/Home"
 import Collection from "../pages/Collection"
@@ -14,6 +15,11 @@ import ProtectedRoute from "../components/authentification/ProtectedRoute"
 import Support from "../pages/Support"
 import MainlayOut from "../layouts/mainlay"
 import AuthLay from "../layouts/AuthLay"
+import HomeLayiut from "../layouts/HomeLayiut"
+import Dashboard from "../adminpages/Dashboard"
+import AdminLay from "../layouts/AdminLay"
+import Products from "../adminpages/Products"
+import AdminOrders from "../adminpages/adminorders"
 
 
 function Routers() {
@@ -27,7 +33,10 @@ function Routers() {
       
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        
+        <Route element={<HomeLayiut/>}>
+          <Route path="/" element={<Home/>}/>
+        </Route>
 
 
         <Route element={<MainlayOut/>}>
@@ -37,6 +46,7 @@ function Routers() {
         <Route path="/kids" element={<Kids />} />
         <Route path="/collection/:id" element={<DetailesPage />} />
         <Route path="/support" element={<Support/>} />
+        <Route path="/orders" element={<Orders/>}/>
         <Route path="/cart" element={<Cart/>}/>
         </Route>
 
@@ -69,6 +79,14 @@ function Routers() {
             </ProtectedRoute>
           }
         />
+
+
+        <Route element={<AdminLay />}>
+          <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/products" element={<Products/>}/>
+          <Route path="adminorders" element={<AdminOrders/>}/>
+        </Route>
+
       </Routes>
     </>
   );

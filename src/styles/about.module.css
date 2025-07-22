@@ -1,0 +1,52 @@
+.aboutContainer {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fef8f8;
+  margin-bottom: 0%;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px;
+  background-color: #000;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ff9900;
+}
+
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}

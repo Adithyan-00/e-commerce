@@ -10,6 +10,11 @@
   background-color: #000;
   color: #fff;
   padding: 100px 20px;
+  background-image: url('https://i.pinimg.com/1200x/a4/e8/7f/a4e87f77a37610077e81af5287f95163.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 680px;
 }
 
 .hero h1 {

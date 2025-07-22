@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
 import useFetch from '../hooks/useFetch';
 import CollectionCard from '../components/CollectionCard';
 import SubNav from '../components/SubNav';
+import { useAuth } from '../components/authentification/Auth';
 
 function Collection() {
+  const {user} = useAuth()
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -12,38 +13,45 @@ function Collection() {
   const { data: products, loading } = useFetch('http://localhost:5000/products');
 
   useEffect(() => {
-    if (!products) return;
+  if (!products) return;
 
-    let filtered = products.filter((product) =>
-      product.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+  console.log("Sort Order:", sortOrder);
 
-    if (sortOrder === 'low') {
-      filtered.sort((a, b) => a.price - b.price);
-    } else if (sortOrder === 'high') {
-      filtered.sort((a, b) => b.price - a.price);
-    }
+  let filtered = products.filter((product) =>
+    product.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-    setFilteredProducts(filtered);
-  }, [products, searchTerm, sortOrder]);
+  if (sortOrder === 'low') {
+    filtered.sort((a, b) => Number(a.price) - Number(b.price));
+  } else if (sortOrder === 'high') {
+    filtered.sort((a, b) => Number(b.price) - Number(a.price));
+  }
+
+  setFilteredProducts(filtered);
+}, [products, searchTerm, sortOrder]);
+
 
   if (loading) return <p>Loading...</p>;
 
+  console.log(user);
+  
+
   return (
     <>
-    
       <SubNav 
-        onSearchChange={(e) => setSearchTerm(e.target.value)}
-        onSortChange={(e) => setSortOrder(e.target.value)}
+        onSearchChange={setSearchTerm}
+        onSortChange={setSortOrder}
       />
+
 
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: '20px',
-        padding: '100px 40px',
+        gridTemplateColumns: 'repeat(3, 350px)',
+        gap: '90px',
+        padding: '50px 40px',
         maxWidth: '1400px',
-        margin: '0 auto'
+        margin: '0 auto',
+        justifyContent: 'center'
       }}>
         {filteredProducts.map((product) => (
           <CollectionCard key={product.id} value={product} />
